@@ -7,11 +7,10 @@
 package edu.com.Panel;
 
 import edu.com.Dialog.ThemGia;
-import edu.com.upbang.AddRowOfTable;
 import java.util.Vector;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
+import koalaproject.AddRowOfTable;
 
 /**
  *
@@ -25,8 +24,8 @@ public class CacLoaiPhi extends javax.swing.JPanel {
     private DefaultTableModel model;
     public CacLoaiPhi() {
         initComponents();
-     new DataBase.DataTable().BangDanhSachPhi(BangPhi);
-     model = (DefaultTableModel)BangPhi.getModel();
+     model=new DataBase.DataTable().BangDanhSachPhi(jTable3);
+       
     }
 
     /**
@@ -38,13 +37,14 @@ public class CacLoaiPhi extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane7 = new javax.swing.JScrollPane();
-        BangPhi = new javax.swing.JTable();
-        ThemPhi = new javax.swing.JLabel();
-        Sua = new javax.swing.JLabel();
-        Xoa = new javax.swing.JLabel();
+        Panel_CacLoaiPhi = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        Button_CacLoaiPhi_Them = new javax.swing.JLabel();
+        Button_CacLoaiPhi_Sua = new javax.swing.JLabel();
+        Button_CacLoaiPhi_Xoa = new javax.swing.JLabel();
 
-        BangPhi.setModel(new javax.swing.table.DefaultTableModel(
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -55,139 +55,99 @@ public class CacLoaiPhi extends javax.swing.JPanel {
                 "Tên", "Kì học", "Năm học", "Giá"
             }
         ));
-        BangPhi.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BangPhiMouseClicked(evt);
-            }
-        });
-        jScrollPane7.setViewportView(BangPhi);
+        jScrollPane5.setViewportView(jTable3);
 
-        ThemPhi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/com/image/them.jpg"))); // NOI18N
-        ThemPhi.addMouseListener(new java.awt.event.MouseAdapter() {
+        Button_CacLoaiPhi_Them.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/com/image/them.jpg"))); // NOI18N
+        Button_CacLoaiPhi_Them.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ThemPhiMouseClicked(evt);
+                Button_CacLoaiPhi_ThemMouseClicked(evt);
             }
         });
 
-        Sua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/com/image/sua.JPG"))); // NOI18N
-        Sua.addMouseListener(new java.awt.event.MouseAdapter() {
+        Button_CacLoaiPhi_Sua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/com/image/sua.JPG"))); // NOI18N
+        Button_CacLoaiPhi_Sua.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                SuaMouseClicked(evt);
+                Button_CacLoaiPhi_SuaMouseClicked(evt);
             }
         });
 
-        Xoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/com/image/xoa.jpg"))); // NOI18N
-        Xoa.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                XoaMouseClicked(evt);
-            }
-        });
+        Button_CacLoaiPhi_Xoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/edu/com/image/xoa.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout Panel_CacLoaiPhiLayout = new javax.swing.GroupLayout(Panel_CacLoaiPhi);
+        Panel_CacLoaiPhi.setLayout(Panel_CacLoaiPhiLayout);
+        Panel_CacLoaiPhiLayout.setHorizontalGroup(
+            Panel_CacLoaiPhiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_CacLoaiPhiLayout.createSequentialGroup()
+                .addGroup(Panel_CacLoaiPhiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel_CacLoaiPhiLayout.createSequentialGroup()
+                        .addComponent(Button_CacLoaiPhi_Them)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Button_CacLoaiPhi_Sua)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Button_CacLoaiPhi_Xoa))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Panel_CacLoaiPhiLayout.setVerticalGroup(
+            Panel_CacLoaiPhiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel_CacLoaiPhiLayout.createSequentialGroup()
+                .addGroup(Panel_CacLoaiPhiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Button_CacLoaiPhi_Them)
+                    .addGroup(Panel_CacLoaiPhiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(Button_CacLoaiPhi_Xoa)
+                        .addComponent(Button_CacLoaiPhi_Sua)))
+                .addGap(7, 7, 7)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(ThemPhi)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Sua)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Xoa)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jScrollPane7)
+            .addComponent(Panel_CacLoaiPhi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(ThemPhi)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(Xoa)
-                        .addComponent(Sua)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE))
+                .addComponent(Panel_CacLoaiPhi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ThemPhiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ThemPhiMouseClicked
+    private void Button_CacLoaiPhi_ThemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_CacLoaiPhi_ThemMouseClicked
         // TODO add your handling code here:
-        ThemGia cost = new ThemGia(null, true);
-        cost.setVisible(true);
-        Vector vec = new Vector();
-        if(cost.getButton()){
-            vec.add(cost.getTenPhi());
-            vec.add(cost.getHocKy());
-            vec.add(cost.getNamHoc());
-            vec.add(cost.getGia());
-            vec.add(false);
-            model.addRow(vec);
-            
+        ThemGia themgia = new ThemGia(null, true);
+        themgia.setLocation(420, 130);
+        themgia.show();
+        if(themgia.getButton())
+        {
+         Vector v= new Vector();
+         v.add(themgia.getTenPhi());
+         v.add(themgia.getHocKy());
+         v.add("2013-01-01");
+         v.add(themgia.getGia());
+         
+         AddRowOfTable a= new AddRowOfTable();
+         a.addRowOfTable(model, v);
+         
         }
-    }//GEN-LAST:event_ThemPhiMouseClicked
+    }//GEN-LAST:event_Button_CacLoaiPhi_ThemMouseClicked
 
-    private void SuaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SuaMouseClicked
+    private void Button_CacLoaiPhi_SuaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_CacLoaiPhi_SuaMouseClicked
         // TODO add your handling code here:
-        int count =1, row=0;
-        for(int i = model.getRowCount()-1;i>=0;i--){
-            if((Boolean)model.getValueAt(i, 4)==true){
-                count--;
-                row = i;
-            }
-        }
-        if(count!=0){
-            if(count==1){
-                JOptionPane.showMessageDialog(null,"Bạn chưa chọn phí cần chỉnh sửa",null,JOptionPane.INFORMATION_MESSAGE);
-            }
-            else{
-                JOptionPane.showMessageDialog(null,"Hệ thống chỉ cho phép chỉnh sửa một đối tượng tại một thời điểm",null,JOptionPane.INFORMATION_MESSAGE);
-                for(int i = model.getRowCount()-1;i>=0;i--){
-             model.setValueAt(false,i,4);
-               }
-            }
-            return;
-        }
-        Vector vec =  (Vector) model.getDataVector().elementAt(row);
-        ThemGia cost = new ThemGia(null, true, vec);
-        cost.setVisible(true);
-        if(cost.getButton()){
-            editRow(row, cost);
-        }
-    }//GEN-LAST:event_SuaMouseClicked
+        ThemGia suagia=new ThemGia(null,true);
+        suagia.setLocation(420, 130);
+        suagia.show();
+    }//GEN-LAST:event_Button_CacLoaiPhi_SuaMouseClicked
 
-    private void BangPhiMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BangPhiMouseClicked
-        // TODO add your handling code here:
-        if(evt.getClickCount()==2){
-            Vector vec =  (Vector) model.getDataVector().elementAt(BangPhi.getSelectedRow());     
-            ThemGia cost = new ThemGia(null, true, vec);
-            cost.setVisible(true);
-            if(cost.getButton()){
-                editRow(BangPhi.getSelectedRow(), cost);
-            }
-        }
-    }//GEN-LAST:event_BangPhiMouseClicked
-    private void editRow(int row,ThemGia cost){
-        model.setValueAt(cost.getTenPhi(),row,0);
-        model.setValueAt(cost.getHocKy(), row,1);
-        model.setValueAt(cost.getNamHoc(),row,2);
-        model.setValueAt(cost.getGia(),row,3);
-        model.setValueAt(false,row,4);
-    }
-    private void XoaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_XoaMouseClicked
-        // TODO add your handling code here:
-        
-        for(int i = model.getRowCount()-1;i>=0;i--){
-            if((Boolean)model.getValueAt(i, 4)==true){
-                model.removeRow(i);
-            }
-        }
-    }//GEN-LAST:event_XoaMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable BangPhi;
-    private javax.swing.JLabel Sua;
-    private javax.swing.JLabel ThemPhi;
-    private javax.swing.JLabel Xoa;
-    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JLabel Button_CacLoaiPhi_Sua;
+    private javax.swing.JLabel Button_CacLoaiPhi_Them;
+    private javax.swing.JLabel Button_CacLoaiPhi_Xoa;
+    private javax.swing.JPanel Panel_CacLoaiPhi;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTable jTable3;
     // End of variables declaration//GEN-END:variables
 }
